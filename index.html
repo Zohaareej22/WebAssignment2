@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Registration Form | NUST</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo-wrapper">
+        <img src="NUST_Vector.svg.png" alt="NUST Logo" class="logo" />
+      </div>
+      <div class="header-text">
+        <h1>National University of Sciences & Technology</h1>
+        <h2>Student Registration Form</h2>
+        <p>Please fill out all required fields (* required)</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <form action="#" method="post" enctype="multipart/form-data">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <div class="form-group">
+          <label for="firstName">First Name *</label>
+          <input type="text" id="firstName" name="firstName" required />
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name *</label>
+          <input type="text" id="lastName" name="lastName" required />
+        </div>
+        <div class="form-group">
+          <label for="studentId">Student ID *</label>
+          <input type="text" id="studentId" name="studentId" pattern="[A-Za-z0-9]+" required />
+        </div>
+        <div class="form-group">
+          <label for="dob">Date of Birth *</label>
+          <input type="date" id="dob" name="dob" required />
+        </div>
+        <div class="form-group">
+          <label>Gender *</label>
+          <div class="inline">
+            <label><input type="radio" name="gender" value="male" required /> Male</label>
+            <label><input type="radio" name="gender" value="female" /> Female</label>
+            <label><input type="radio" name="gender" value="other" /> Other</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Academic Information</legend>
+        <div class="form-group">
+          <label for="program">Program / Department *</label>
+          <select id="program" name="program" required>
+            <optgroup label="Engineering">
+              <option>Computer Science</option>
+              <option>Software Engineering</option>
+            </optgroup>
+            <optgroup label="Management">
+              <option>Business Administration</option>
+              <option>Finance</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="semester">Year / Semester *</label>
+          <select id="semester" name="semester" required>
+            <option>Year 1 - Fall</option>
+            <option>Year 1 - Spring</option>
+            <option>Year 2 - Fall</option>
+            <option>Year 2 - Spring</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Enrollment Type *</label>
+          <div class="inline">
+            <label><input type="radio" name="enrollType" value="full-time" required /> Full-time</label>
+            <label><input type="radio" name="enrollType" value="part-time" /> Part-time</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Contact Details</legend>
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone *</label>
+          <input type="tel" id="phone" name="phone" placeholder="+92XXXXXXXXXX" required />
+        </div>
+        <div class="form-group full-width">
+          <label for="address">Address *</label>
+          <textarea id="address" name="address" rows="3" required></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Course & Campus Preferences</legend>
+        <div class="form-group">
+          <label>Courses to Register *</label>
+          <div class="inline">
+            <label><input type="checkbox" name="courses" value="Web Engineering" /> Web Engineering</label>
+            <label><input type="checkbox" name="courses" value="Database Systems" /> Database Systems</label>
+            <label><input type="checkbox" name="courses" value="AI" /> Artificial Intelligence</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="campus">Preferred Campus *</label>
+          <input list="campusList" id="campus" name="campus" required />
+          <datalist id="campusList">
+            <option value="Main Campus"></option>
+            <option value="City Campus"></option>
+            <option value="Virtual Campus"></option>
+          </datalist>
+        </div>
+        <div class="form-group">
+          <label for="photo">Profile Photo *</label>
+          <input type="file" id="photo" name="photo" accept="image/*" required />
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Account Setup</legend>
+        <div class="form-group">
+          <label for="password">Password *</label>
+          <input type="password" id="password" name="password" pattern=".{6,}" placeholder="At least 6 characters" required />
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password *</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" pattern=".{6,}" required />
+        </div>
+      </fieldset>
+
+      <div class="form-group full-width">
+        <label><input type="checkbox" required /> I agree to the terms and conditions *</label>
+      </div>
+
+      <div class="buttons">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>© National University of Sciences & Technology |ASSIGNMENT 2| @ZOHA AREAJ </p>
+  </footer>
+</body>
+</html>
